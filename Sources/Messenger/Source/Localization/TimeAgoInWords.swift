@@ -1,0 +1,112 @@
+//
+//  TimeAgoInWords.swift
+//  Ello
+//
+//  Created by Ryan Boyajian on 4/2/15.
+//  Copyright (c) 2015 Ello. All rights reserved.
+//
+
+import Foundation
+
+final public class TimeAgoInWords {
+}
+
+private let table = "TimeAgoInWords"
+private let resourceBundle: Bundle = {
+    return KayakoResources.frameworkResourceBundle ?? Bundle.main
+}()
+
+public struct TimeAgoInWordsStrings {
+    static var LessThan = NSLocalizedString("less-than", tableName: table, bundle: resourceBundle, comment: "Indicates a less-than number")
+    static var About    = NSLocalizedString("approximate", tableName: table, bundle: resourceBundle, comment: "Indicates an approximate number")
+    static var Over     = NSLocalizedString("exceeding", tableName: table, bundle: resourceBundle, comment: "Indicates an exceeding number")
+    static var Almost   = NSLocalizedString("approaching", tableName: table, bundle: resourceBundle, comment: "Indicates an approaching number")
+    static var Seconds  = NSLocalizedString("seconds", tableName: table, bundle: resourceBundle, comment: "More than one second in time")
+    static var Minute   = NSLocalizedString("one-minute", tableName: table, bundle: resourceBundle, comment: "One minute in time")
+    static var Minutes  = NSLocalizedString("minutes", tableName: table, bundle: resourceBundle, comment: "More than one minute in time")
+    static var Hour     = NSLocalizedString("one-hour", tableName: table, bundle: resourceBundle, comment: "One hour in time")
+    static var Hours    = NSLocalizedString("hours", tableName: table, bundle: resourceBundle, comment: "More than one hour in time")
+    static var Day      = NSLocalizedString("one-day", tableName: table, bundle: resourceBundle, comment: "One day in time")
+    static var Days     = NSLocalizedString("days", tableName: table, bundle: resourceBundle, comment: "More than one day in time")
+    static var Months   = NSLocalizedString("months", tableName: table, bundle: resourceBundle, comment: "More than one month in time")
+    static var Years    = NSLocalizedString("years", tableName: table, bundle: resourceBundle, comment: "More than one year in time")
+
+    static public func updateStrings(_ dict: [String: String]) {
+        for (key, value) in dict {
+            switch key.lowercased() {
+            case "lessthan": LessThan = value
+            case "about": About = value
+            case "over": Over = value
+            case "almost": Almost = value
+            case "seconds": Seconds = value
+            case "minute": Minute = value
+            case "minutes": Minutes = value
+            case "hour": Hour = value
+            case "hours": Hours = value
+            case "day": Day = value
+            case "days": Days = value
+            case "months": Months = value
+            case "years": Years = value
+            default: print("TimeAgoInWordsStrings.updateStrings key \(key) is not supported.")
+            }
+        }
+    }
+}
+
+public extension Date {
+    func distanceOfTimeInWords(_ toDate:Date) -> String {
+
+//        let MINUTES_IN_YEAR = 525_600.0
+//        let MINUTES_IN_QUARTER_YEAR	= 131_400.0
+//        let MINUTES_IN_THREE_QUARTERS_YEAR = 394_200.0
+
+        let distanceInSeconds = round(abs(toDate.timeIntervalSince(self)))
+        let distanceInMinutes = round(distanceInSeconds / 60.0)
+
+        switch distanceInMinutes {
+        case 0...1:
+            switch distanceInSeconds {
+            case 0...4:
+				fallthrough
+//                return TimeAgoInWordsStrings.LessThan + "5" + TimeAgoInWordsStrings.Seconds
+            case 5...9:
+				fallthrough
+//                return TimeAgoInWordsStrings.LessThan + "10" + TimeAgoInWordsStrings.Seconds
+            case 10...19:
+//                return TimeAgoInWordsStrings.LessThan + "20" + TimeAgoInWordsStrings.Seconds
+				fallthrough
+            case 20...44:
+//                return "30" + TimeAgoInWordsStrings.Seconds
+				return "Just now"
+            case 45...89:
+				fallthrough
+//                return TimeAgoInWordsStrings.LessThan + "1" + TimeAgoInWordsStrings.Minute
+            default:
+                return "1" + TimeAgoInWordsStrings.Minute
+            }
+        case 2...44:
+            return "\(Int(round(distanceInMinutes)))" + TimeAgoInWordsStrings.Minutes
+        case 45...90:
+            return TimeAgoInWordsStrings.About + "1" + TimeAgoInWordsStrings.Hour
+        // 90 mins up to 24 hours
+        case 90...1_260:
+            return TimeAgoInWordsStrings.About + "\(Int(round(distanceInMinutes / 60.0)))" + TimeAgoInWordsStrings.Hours
+        // 24 hours up to 42 hours
+        case 1_260...2_100:
+            return "1" + TimeAgoInWordsStrings.Day
+        // 42 hours up to 30 days
+        case 2_100...7_920:
+            return "\(Int(round(distanceInMinutes / 1_440.0)))" + TimeAgoInWordsStrings.Days
+        // TODO: handle leap year like rails does
+        default:
+            let dateFormatter = DateFormatter()
+			dateFormatter.dateStyle = .short
+			dateFormatter.timeStyle = .none
+			return dateFormatter.string(from: self)
+        }
+    }
+
+    func timeAgoInWords() -> String {
+        return self.distanceOfTimeInWords(Date())
+    }
+}
