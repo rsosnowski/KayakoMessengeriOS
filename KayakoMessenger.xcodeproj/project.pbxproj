@@ -51,9 +51,6 @@
 		423881E41F0EA39D002B2B0D /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423881B81F0EA39D002B2B0D /* Resource.swift */; };
 		423881E51F0EA39D002B2B0D /* ResourceName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423881B91F0EA39D002B2B0D /* ResourceName.swift */; };
 		423881E61F0EA39D002B2B0D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423881BA1F0EA39D002B2B0D /* Router.swift */; };
-		423881E91F0EA65C002B2B0D /* Unbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423881E71F0EA65C002B2B0D /* Unbox.framework */; };
-		423881EA1F0EA65C002B2B0D /* Wrap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423881E81F0EA65C002B2B0D /* Wrap.framework */; };
-		423881EE1F0EA7FC002B2B0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423881ED1F0EA7FC002B2B0D /* UIKit.framework */; };
 		4238823D1F0EA81A002B2B0D /* ArrayDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423881F11F0EA81A002B2B0D /* ArrayDiff.swift */; };
 		4238823E1F0EA81A002B2B0D /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423881F21F0EA81A002B2B0D /* FoundationExtensions.swift */; };
 		4238823F1F0EA81A002B2B0D /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423881F31F0EA81A002B2B0D /* Section.swift */; };
@@ -118,20 +115,47 @@
 		4238827A1F0EA81A002B2B0D /* TextBarUpdateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238823A1F0EA81A002B2B0D /* TextBarUpdateDelegate.swift */; };
 		4238827B1F0EA81A002B2B0D /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238823B1F0EA81A002B2B0D /* UIView+Snapshot.swift */; };
 		4238827C1F0EA81A002B2B0D /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238823C1F0EA81A002B2B0D /* TestingViewController.swift */; };
-		423882851F0EAAE5002B2B0D /* AsyncDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238827D1F0EAAE5002B2B0D /* AsyncDisplayKit.framework */; };
-		423882861F0EAAE5002B2B0D /* Birdsong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238827E1F0EAAE5002B2B0D /* Birdsong.framework */; };
-		423882871F0EAAE5002B2B0D /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238827F1F0EAAE5002B2B0D /* NVActivityIndicatorView.framework */; };
-		423882881F0EAAE5002B2B0D /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882801F0EAAE5002B2B0D /* PINCache.framework */; };
-		423882891F0EAAE5002B2B0D /* PINOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882811F0EAAE5002B2B0D /* PINOperation.framework */; };
-		4238828A1F0EAAE5002B2B0D /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882821F0EAAE5002B2B0D /* PINRemoteImage.framework */; };
-		4238828B1F0EAAE5002B2B0D /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882831F0EAAE5002B2B0D /* Starscream.framework */; };
-		4238828C1F0EAAE5002B2B0D /* StatefulViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882841F0EAAE5002B2B0D /* StatefulViewController.framework */; };
+		423882941F0EACC8002B2B0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423882931F0EACC8002B2B0D /* AppDelegate.swift */; };
+		423882961F0EACC8002B2B0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423882951F0EACC8002B2B0D /* ViewController.swift */; };
+		423882991F0EACC8002B2B0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423882971F0EACC8002B2B0D /* Main.storyboard */; };
+		4238829B1F0EACC8002B2B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4238829A1F0EACC8002B2B0D /* Assets.xcassets */; };
+		4238829E1F0EACC8002B2B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4238829C1F0EACC8002B2B0D /* LaunchScreen.storyboard */; };
+		423882A91F0EACC9002B2B0D /* MessengerExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423882A81F0EACC9002B2B0D /* MessengerExampleUITests.swift */; };
+		423882B11F0EAE8C002B2B0D /* Wrap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423881E81F0EA65C002B2B0D /* Wrap.framework */; };
+		423882B21F0EAE8C002B2B0D /* Unbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423881E71F0EA65C002B2B0D /* Unbox.framework */; };
+		423882B31F0EAE8C002B2B0D /* AsyncDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238827D1F0EAAE5002B2B0D /* AsyncDisplayKit.framework */; };
+		423882B41F0EAE8C002B2B0D /* StatefulViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882841F0EAAE5002B2B0D /* StatefulViewController.framework */; };
+		423882B51F0EAE8C002B2B0D /* Birdsong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238827E1F0EAAE5002B2B0D /* Birdsong.framework */; };
+		423882B61F0EAE8C002B2B0D /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882831F0EAAE5002B2B0D /* Starscream.framework */; };
+		423882B71F0EAE8C002B2B0D /* PINOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882811F0EAAE5002B2B0D /* PINOperation.framework */; };
+		423882B81F0EAE8C002B2B0D /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238827F1F0EAAE5002B2B0D /* NVActivityIndicatorView.framework */; };
+		423882B91F0EAE8C002B2B0D /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882821F0EAAE5002B2B0D /* PINRemoteImage.framework */; };
+		423882BA1F0EAE8C002B2B0D /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882801F0EAAE5002B2B0D /* PINCache.framework */; };
+		423882BB1F0EAEB3002B2B0D /* Wrap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423881E81F0EA65C002B2B0D /* Wrap.framework */; };
+		423882BC1F0EAEB3002B2B0D /* Unbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423881E71F0EA65C002B2B0D /* Unbox.framework */; };
+		423882BD1F0EAEB3002B2B0D /* AsyncDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238827D1F0EAAE5002B2B0D /* AsyncDisplayKit.framework */; };
+		423882BE1F0EAEB3002B2B0D /* StatefulViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882841F0EAAE5002B2B0D /* StatefulViewController.framework */; };
+		423882BF1F0EAEB3002B2B0D /* Birdsong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238827E1F0EAAE5002B2B0D /* Birdsong.framework */; };
+		423882C01F0EAEB3002B2B0D /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882831F0EAAE5002B2B0D /* Starscream.framework */; };
+		423882C11F0EAEB3002B2B0D /* PINOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882811F0EAAE5002B2B0D /* PINOperation.framework */; };
+		423882C21F0EAEB3002B2B0D /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238827F1F0EAAE5002B2B0D /* NVActivityIndicatorView.framework */; };
+		423882C31F0EAEB3002B2B0D /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882821F0EAAE5002B2B0D /* PINRemoteImage.framework */; };
+		423882C41F0EAEB3002B2B0D /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882801F0EAAE5002B2B0D /* PINCache.framework */; };
+		423882C51F0EAEB6002B2B0D /* KayakoMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* KayakoMessenger.framework */; };
+		423882C81F0EAFBD002B2B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423882C71F0EAFBD002B2B0D /* Assets.xcassets */; };
 		52D6D9871BEFF229002C0205 /* KayakoMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* KayakoMessenger.framework */; };
 		8933C7851EB5B820000D00A4 /* KayakoMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* KayakoMessenger.swift */; };
 		8933C7901EB5B82D000D00A4 /* KayakoMessengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* KayakoMessengerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		423882A51F0EACC9002B2B0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52D6D9731BEFF229002C0205 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 423882901F0EACC8002B2B0D;
+			remoteInfo = MessengerExample;
+		};
 		52D6D9881BEFF229002C0205 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 52D6D9731BEFF229002C0205 /* Project object */;
@@ -261,6 +285,17 @@
 		423882821F0EAAE5002B2B0D /* PINRemoteImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINRemoteImage.framework; path = Carthage/Build/iOS/PINRemoteImage.framework; sourceTree = "<group>"; };
 		423882831F0EAAE5002B2B0D /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		423882841F0EAAE5002B2B0D /* StatefulViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StatefulViewController.framework; path = Carthage/Build/iOS/StatefulViewController.framework; sourceTree = "<group>"; };
+		423882911F0EACC8002B2B0D /* MessengerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		423882931F0EACC8002B2B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		423882951F0EACC8002B2B0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		423882981F0EACC8002B2B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4238829A1F0EACC8002B2B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4238829D1F0EACC8002B2B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4238829F1F0EACC8002B2B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		423882A41F0EACC9002B2B0D /* MessengerExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessengerExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		423882A81F0EACC9002B2B0D /* MessengerExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerExampleUITests.swift; sourceTree = "<group>"; };
+		423882AA1F0EACC9002B2B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		423882C71F0EAFBD002B2B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* KayakoMessenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KayakoMessenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* KayakoMessenger-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KayakoMessenger-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8933C7841EB5B820000D00A4 /* KayakoMessenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KayakoMessenger.swift; sourceTree = "<group>"; };
@@ -270,21 +305,45 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4238828E1F0EACC8002B2B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				423882C51F0EAEB6002B2B0D /* KayakoMessenger.framework in Frameworks */,
+				423882BB1F0EAEB3002B2B0D /* Wrap.framework in Frameworks */,
+				423882BC1F0EAEB3002B2B0D /* Unbox.framework in Frameworks */,
+				423882BD1F0EAEB3002B2B0D /* AsyncDisplayKit.framework in Frameworks */,
+				423882BE1F0EAEB3002B2B0D /* StatefulViewController.framework in Frameworks */,
+				423882BF1F0EAEB3002B2B0D /* Birdsong.framework in Frameworks */,
+				423882C01F0EAEB3002B2B0D /* Starscream.framework in Frameworks */,
+				423882C11F0EAEB3002B2B0D /* PINOperation.framework in Frameworks */,
+				423882C21F0EAEB3002B2B0D /* NVActivityIndicatorView.framework in Frameworks */,
+				423882C31F0EAEB3002B2B0D /* PINRemoteImage.framework in Frameworks */,
+				423882C41F0EAEB3002B2B0D /* PINCache.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		423882A11F0EACC9002B2B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52D6D9781BEFF229002C0205 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				423882861F0EAAE5002B2B0D /* Birdsong.framework in Frameworks */,
-				423881EE1F0EA7FC002B2B0D /* UIKit.framework in Frameworks */,
-				423882891F0EAAE5002B2B0D /* PINOperation.framework in Frameworks */,
-				4238828B1F0EAAE5002B2B0D /* Starscream.framework in Frameworks */,
-				423882871F0EAAE5002B2B0D /* NVActivityIndicatorView.framework in Frameworks */,
-				423882851F0EAAE5002B2B0D /* AsyncDisplayKit.framework in Frameworks */,
-				4238828C1F0EAAE5002B2B0D /* StatefulViewController.framework in Frameworks */,
-				423881EA1F0EA65C002B2B0D /* Wrap.framework in Frameworks */,
-				4238828A1F0EAAE5002B2B0D /* PINRemoteImage.framework in Frameworks */,
-				423882881F0EAAE5002B2B0D /* PINCache.framework in Frameworks */,
-				423881E91F0EA65C002B2B0D /* Unbox.framework in Frameworks */,
+				423882B11F0EAE8C002B2B0D /* Wrap.framework in Frameworks */,
+				423882B21F0EAE8C002B2B0D /* Unbox.framework in Frameworks */,
+				423882B31F0EAE8C002B2B0D /* AsyncDisplayKit.framework in Frameworks */,
+				423882B41F0EAE8C002B2B0D /* StatefulViewController.framework in Frameworks */,
+				423882B51F0EAE8C002B2B0D /* Birdsong.framework in Frameworks */,
+				423882B61F0EAE8C002B2B0D /* Starscream.framework in Frameworks */,
+				423882B71F0EAE8C002B2B0D /* PINOperation.framework in Frameworks */,
+				423882B81F0EAE8C002B2B0D /* NVActivityIndicatorView.framework in Frameworks */,
+				423882B91F0EAE8C002B2B0D /* PINRemoteImage.framework in Frameworks */,
+				423882BA1F0EAE8C002B2B0D /* PINCache.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +616,28 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		423882921F0EACC8002B2B0D /* MessengerExample */ = {
+			isa = PBXGroup;
+			children = (
+				423882931F0EACC8002B2B0D /* AppDelegate.swift */,
+				423882951F0EACC8002B2B0D /* ViewController.swift */,
+				423882971F0EACC8002B2B0D /* Main.storyboard */,
+				4238829A1F0EACC8002B2B0D /* Assets.xcassets */,
+				4238829C1F0EACC8002B2B0D /* LaunchScreen.storyboard */,
+				4238829F1F0EACC8002B2B0D /* Info.plist */,
+			);
+			path = MessengerExample;
+			sourceTree = "<group>";
+		};
+		423882A71F0EACC9002B2B0D /* MessengerExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				423882A81F0EACC9002B2B0D /* MessengerExampleUITests.swift */,
+				423882AA1F0EACC9002B2B0D /* Info.plist */,
+			);
+			path = MessengerExampleUITests;
+			sourceTree = "<group>";
+		};
 		52D6D9721BEFF229002C0205 = {
 			isa = PBXGroup;
 			children = (
@@ -573,6 +654,8 @@
 				8933C7811EB5B7E0000D00A4 /* Sources */,
 				8933C7831EB5B7EB000D00A4 /* Tests */,
 				52D6D99C1BEFF38C002C0205 /* Configs */,
+				423882921F0EACC8002B2B0D /* MessengerExample */,
+				423882A71F0EACC9002B2B0D /* MessengerExampleUITests */,
 				52D6D97D1BEFF229002C0205 /* Products */,
 				423881EC1F0EA7FC002B2B0D /* Frameworks */,
 			);
@@ -583,6 +666,8 @@
 			children = (
 				52D6D97C1BEFF229002C0205 /* KayakoMessenger.framework */,
 				52D6D9861BEFF229002C0205 /* KayakoMessenger-iOS Tests.xctest */,
+				423882911F0EACC8002B2B0D /* MessengerExample.app */,
+				423882A41F0EACC9002B2B0D /* MessengerExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -599,6 +684,7 @@
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				423882C71F0EAFBD002B2B0D /* Assets.xcassets */,
 				423881891F0EA39D002B2B0D /* API */,
 				423881EF1F0EA81A002B2B0D /* Messenger */,
 				8933C7841EB5B820000D00A4 /* KayakoMessenger.swift */,
@@ -644,6 +730,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		423882901F0EACC8002B2B0D /* MessengerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 423882AB1F0EACC9002B2B0D /* Build configuration list for PBXNativeTarget "MessengerExample" */;
+			buildPhases = (
+				4238828D1F0EACC8002B2B0D /* Sources */,
+				4238828E1F0EACC8002B2B0D /* Frameworks */,
+				4238828F1F0EACC8002B2B0D /* Resources */,
+				423882C61F0EAEBC002B2B0D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessengerExample;
+			productName = MessengerExample;
+			productReference = 423882911F0EACC8002B2B0D /* MessengerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		423882A31F0EACC9002B2B0D /* MessengerExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 423882AE1F0EACC9002B2B0D /* Build configuration list for PBXNativeTarget "MessengerExampleUITests" */;
+			buildPhases = (
+				423882A01F0EACC9002B2B0D /* Sources */,
+				423882A11F0EACC9002B2B0D /* Frameworks */,
+				423882A21F0EACC9002B2B0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				423882A61F0EACC9002B2B0D /* PBXTargetDependency */,
+			);
+			name = MessengerExampleUITests;
+			productName = MessengerExampleUITests;
+			productReference = 423882A41F0EACC9002B2B0D /* MessengerExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		52D6D97B1BEFF229002C0205 /* KayakoMessenger-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52D6D9901BEFF229002C0205 /* Build configuration list for PBXNativeTarget "KayakoMessenger-iOS" */;
@@ -652,7 +774,6 @@
 				52D6D9781BEFF229002C0205 /* Frameworks */,
 				52D6D9791BEFF229002C0205 /* Headers */,
 				52D6D97A1BEFF229002C0205 /* Resources */,
-				423881EB1F0EA673002B2B0D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -687,10 +808,19 @@
 		52D6D9731BEFF229002C0205 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Kayako;
 				TargetAttributes = {
+					423882901F0EACC8002B2B0D = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					423882A31F0EACC9002B2B0D = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 423882901F0EACC8002B2B0D;
+					};
 					52D6D97B1BEFF229002C0205 = {
 						CreatedOnToolsVersion = 7.1;
 						LastSwiftMigration = 0800;
@@ -707,6 +837,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 52D6D9721BEFF229002C0205;
 			productRefGroup = 52D6D97D1BEFF229002C0205 /* Products */;
@@ -715,16 +846,36 @@
 			targets = (
 				52D6D97B1BEFF229002C0205 /* KayakoMessenger-iOS */,
 				52D6D9851BEFF229002C0205 /* KayakoMessenger-iOS Tests */,
+				423882901F0EACC8002B2B0D /* MessengerExample */,
+				423882A31F0EACC9002B2B0D /* MessengerExampleUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4238828F1F0EACC8002B2B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4238829E1F0EACC8002B2B0D /* LaunchScreen.storyboard in Resources */,
+				4238829B1F0EACC8002B2B0D /* Assets.xcassets in Resources */,
+				423882991F0EACC8002B2B0D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		423882A21F0EACC9002B2B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52D6D97A1BEFF229002C0205 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				423882641F0EA81A002B2B0D /* TimeAgoInWords.strings in Resources */,
+				423882C81F0EAFBD002B2B0D /* Assets.xcassets in Resources */,
 				4238824E1F0EA81A002B2B0D /* BotQuestions.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -739,7 +890,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		423881EB1F0EA673002B2B0D /* ShellScript */ = {
+		423882C61F0EAEBC002B2B0D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -765,6 +916,23 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4238828D1F0EACC8002B2B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				423882961F0EACC8002B2B0D /* ViewController.swift in Sources */,
+				423882941F0EACC8002B2B0D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		423882A01F0EACC9002B2B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				423882A91F0EACC9002B2B0D /* MessengerExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52D6D9771BEFF229002C0205 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -890,6 +1058,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		423882A61F0EACC9002B2B0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 423882901F0EACC8002B2B0D /* MessengerExample */;
+			targetProxy = 423882A51F0EACC9002B2B0D /* PBXContainerItemProxy */;
+		};
 		52D6D9891BEFF229002C0205 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 52D6D97B1BEFF229002C0205 /* KayakoMessenger-iOS */;
@@ -914,9 +1087,103 @@
 			name = TimeAgoInWords.strings;
 			sourceTree = "<group>";
 		};
+		423882971F0EACC8002B2B0D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				423882981F0EACC8002B2B0D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4238829C1F0EACC8002B2B0D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4238829D1F0EACC8002B2B0D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		423882AC1F0EACC9002B2B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = MessengerExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kayako.MessengerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		423882AD1F0EACC9002B2B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = MessengerExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kayako.MessengerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		423882AF1F0EACC9002B2B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				INFOPLIST_FILE = MessengerExampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kayako.MessengerExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MessengerExample;
+			};
+			name = Debug;
+		};
+		423882B01F0EACC9002B2B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				INFOPLIST_FILE = MessengerExampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kayako.MessengerExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MessengerExample;
+			};
+			name = Release;
+		};
 		52D6D98E1BEFF229002C0205 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1094,6 +1361,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		423882AB1F0EACC9002B2B0D /* Build configuration list for PBXNativeTarget "MessengerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				423882AC1F0EACC9002B2B0D /* Debug */,
+				423882AD1F0EACC9002B2B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		423882AE1F0EACC9002B2B0D /* Build configuration list for PBXNativeTarget "MessengerExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				423882AF1F0EACC9002B2B0D /* Debug */,
+				423882B01F0EACC9002B2B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		52D6D9761BEFF229002C0205 /* Build configuration list for PBXProject "KayakoMessenger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
