@@ -15,7 +15,7 @@ public enum MultiResource<T>: Pathable {
 	
 	func path() -> (path: String, params: [String: String]) {
 		switch self {
-		case .paginated(let parents, let offset, let limit):
+		case .paginated(let parents, let offset, _):
 			let params: [String: String] = {
 				var dict: [String: String] = [:]
 				offset.flatMap{ dict["offset"] = "\($0)"}

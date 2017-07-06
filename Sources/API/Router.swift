@@ -78,7 +78,7 @@ public struct Router {
 			}
 		}()
 		
-		if let url = URL(string: urlString) {
+		if let _ = URL(string: urlString) {
 			let queryParams: [URLQueryItem] = {
 				if includes == [] {
 					return []
@@ -97,7 +97,6 @@ public struct Router {
 					return URL(string: "https://support.kayako.com")!
 				#endif
 			}
-			return url
 		} else {
 			#if DEBUG
 				fatalError("URL Incorrect: \(APIProtocol + [baseURL, apiPrefix].joined(separator: "/"))")
