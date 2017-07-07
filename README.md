@@ -20,4 +20,4 @@ pod 'KayakoMessenger'
 
 # Documentation
 
-For a more detailed documentation, head over to [Kayako's Developer Portal](https://developer.kayako.com/messenger/ios/installation/).
+For more detailed documentation, head over to [Kayako's Developer Portal](https://developer.kayako.com/messenger/ios/installation/).
