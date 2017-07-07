@@ -9,7 +9,7 @@ You can use either carthage or cocoapods to integrate this SDK in your app
 ## Carthage(most supported)
 
 ```ogdl
-github "Kayako/KayakoMessengeriOS
+github "Kayako/KayakoMessengeriOS"
 ```
 
 ## Cocoapods
