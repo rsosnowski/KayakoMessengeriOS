@@ -29,7 +29,7 @@ public enum MessageStatus {
 		case .bounced:
 			return "Bounced"
 		case .failed:
-			return "Failed. Tap to resend"
+			return "Failed. Tap to Resend"
 		case .sending:
 			return "Sending…"
 		case .custom(let customString):

@@ -90,7 +90,6 @@
 		423882611F0EA81A002B2B0D /* WelcomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238821D1F0EA81A002B2B0D /* WelcomeHeader.swift */; };
 		423882621F0EA81A002B2B0D /* KayakoStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238821E1F0EA81A002B2B0D /* KayakoStyle.swift */; };
 		423882631F0EA81A002B2B0D /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238821F1F0EA81A002B2B0D /* LoadingIndicator.swift */; };
-		423882641F0EA81A002B2B0D /* TimeAgoInWords.strings in Resources */ = {isa = PBXBuildFile; fileRef = 423882211F0EA81A002B2B0D /* TimeAgoInWords.strings */; };
 		423882651F0EA81A002B2B0D /* TimeAgoInWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423882231F0EA81A002B2B0D /* TimeAgoInWords.swift */; };
 		423882661F0EA81A002B2B0D /* AgentsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423882251F0EA81A002B2B0D /* AgentsHeaderView.swift */; };
 		423882671F0EA81A002B2B0D /* ALKeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423882261F0EA81A002B2B0D /* ALKeyboardHandler.swift */; };
@@ -141,8 +140,9 @@
 		423882C21F0EAEB3002B2B0D /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238827F1F0EAAE5002B2B0D /* NVActivityIndicatorView.framework */; };
 		423882C31F0EAEB3002B2B0D /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882821F0EAAE5002B2B0D /* PINRemoteImage.framework */; };
 		423882C41F0EAEB3002B2B0D /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423882801F0EAAE5002B2B0D /* PINCache.framework */; };
-		423882C51F0EAEB6002B2B0D /* KayakoMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* KayakoMessenger.framework */; };
-		423882C81F0EAFBD002B2B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423882C71F0EAFBD002B2B0D /* Assets.xcassets */; };
+		4241531D1F14E99A0005FF2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4241531A1F14E99A0005FF2A /* Assets.xcassets */; };
+		4241531E1F14E99A0005FF2A /* TimeAgoInWords.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4241531B1F14E99A0005FF2A /* TimeAgoInWords.strings */; };
+		42C230261F10C28500B59416 /* KayakoMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* KayakoMessenger.framework */; };
 		52D6D9871BEFF229002C0205 /* KayakoMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* KayakoMessenger.framework */; };
 		8933C7851EB5B820000D00A4 /* KayakoMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* KayakoMessenger.swift */; };
 		8933C7901EB5B82D000D00A4 /* KayakoMessengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* KayakoMessengerTests.swift */; };
@@ -252,7 +252,6 @@
 		4238821D1F0EA81A002B2B0D /* WelcomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeHeader.swift; sourceTree = "<group>"; };
 		4238821E1F0EA81A002B2B0D /* KayakoStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KayakoStyle.swift; sourceTree = "<group>"; };
 		4238821F1F0EA81A002B2B0D /* LoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
-		423882221F0EA81A002B2B0D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TimeAgoInWords.strings; sourceTree = "<group>"; };
 		423882231F0EA81A002B2B0D /* TimeAgoInWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAgoInWords.swift; sourceTree = "<group>"; };
 		423882251F0EA81A002B2B0D /* AgentsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentsHeaderView.swift; sourceTree = "<group>"; };
 		423882261F0EA81A002B2B0D /* ALKeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALKeyboardHandler.swift; sourceTree = "<group>"; };
@@ -295,7 +294,8 @@
 		423882A41F0EACC9002B2B0D /* MessengerExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessengerExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		423882A81F0EACC9002B2B0D /* MessengerExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerExampleUITests.swift; sourceTree = "<group>"; };
 		423882AA1F0EACC9002B2B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		423882C71F0EAFBD002B2B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4241531A1F14E99A0005FF2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4241531C1F14E99A0005FF2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TimeAgoInWords.strings; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* KayakoMessenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KayakoMessenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* KayakoMessenger-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KayakoMessenger-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8933C7841EB5B820000D00A4 /* KayakoMessenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KayakoMessenger.swift; sourceTree = "<group>"; };
@@ -309,7 +309,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				423882C51F0EAEB6002B2B0D /* KayakoMessenger.framework in Frameworks */,
+				42C230261F10C28500B59416 /* KayakoMessenger.framework in Frameworks */,
 				423882BB1F0EAEB3002B2B0D /* Wrap.framework in Frameworks */,
 				423882BC1F0EAEB3002B2B0D /* Unbox.framework in Frameworks */,
 				423882BD1F0EAEB3002B2B0D /* AsyncDisplayKit.framework in Frameworks */,
@@ -575,7 +575,6 @@
 		423882201F0EA81A002B2B0D /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				423882211F0EA81A002B2B0D /* TimeAgoInWords.strings */,
 				423882231F0EA81A002B2B0D /* TimeAgoInWords.swift */,
 			);
 			path = Localization;
@@ -638,6 +637,15 @@
 			path = MessengerExampleUITests;
 			sourceTree = "<group>";
 		};
+		424153191F14E99A0005FF2A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4241531A1F14E99A0005FF2A /* Assets.xcassets */,
+				4241531B1F14E99A0005FF2A /* TimeAgoInWords.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		52D6D9721BEFF229002C0205 = {
 			isa = PBXGroup;
 			children = (
@@ -651,6 +659,7 @@
 				423882841F0EAAE5002B2B0D /* StatefulViewController.framework */,
 				423881E71F0EA65C002B2B0D /* Unbox.framework */,
 				423881E81F0EA65C002B2B0D /* Wrap.framework */,
+				424153191F14E99A0005FF2A /* Resources */,
 				8933C7811EB5B7E0000D00A4 /* Sources */,
 				8933C7831EB5B7EB000D00A4 /* Tests */,
 				52D6D99C1BEFF38C002C0205 /* Configs */,
@@ -684,7 +693,6 @@
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				423882C71F0EAFBD002B2B0D /* Assets.xcassets */,
 				423881891F0EA39D002B2B0D /* API */,
 				423881EF1F0EA81A002B2B0D /* Messenger */,
 				8933C7841EB5B820000D00A4 /* KayakoMessenger.swift */,
@@ -814,6 +822,7 @@
 				TargetAttributes = {
 					423882901F0EACC8002B2B0D = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = FT6Z43AJD2;
 						ProvisioningStyle = Automatic;
 					};
 					423882A31F0EACC9002B2B0D = {
@@ -874,9 +883,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				423882641F0EA81A002B2B0D /* TimeAgoInWords.strings in Resources */,
-				423882C81F0EAFBD002B2B0D /* Assets.xcassets in Resources */,
+				4241531D1F14E99A0005FF2A /* Assets.xcassets in Resources */,
 				4238824E1F0EA81A002B2B0D /* BotQuestions.strings in Resources */,
+				4241531E1F14E99A0005FF2A /* TimeAgoInWords.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1079,14 +1088,6 @@
 			name = BotQuestions.strings;
 			sourceTree = "<group>";
 		};
-		423882211F0EA81A002B2B0D /* TimeAgoInWords.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				423882221F0EA81A002B2B0D /* en */,
-			);
-			name = TimeAgoInWords.strings;
-			sourceTree = "<group>";
-		};
 		423882971F0EACC8002B2B0D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1103,6 +1104,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		4241531B1F14E99A0005FF2A /* TimeAgoInWords.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4241531C1F14E99A0005FF2A /* en */,
+			);
+			name = TimeAgoInWords.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1113,6 +1122,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = FT6Z43AJD2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1134,6 +1144,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = FT6Z43AJD2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1368,6 +1379,7 @@
 				423882AD1F0EACC9002B2B0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		423882AE1F0EACC9002B2B0D /* Build configuration list for PBXNativeTarget "MessengerExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -1376,6 +1388,7 @@
 				423882B01F0EACC9002B2B0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52D6D9761BEFF229002C0205 /* Build configuration list for PBXProject "KayakoMessenger" */ = {
 			isa = XCConfigurationList;

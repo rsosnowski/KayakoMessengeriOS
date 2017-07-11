@@ -12,7 +12,7 @@ class ALKeyboardHandler: NSObject {
 
 	weak var controller: MessagesViewController?
 	
-	let bottomPadding = CGFloat(27.0)
+	static let bottomPadding = CGFloat(9.0)
 	
 	func keyboardFrameChanged(notification: NSNotification) {
 		if let userInfo = notification.userInfo {
@@ -27,14 +27,14 @@ class ALKeyboardHandler: NSObject {
 	func setInsets(frame: CGRect) {
 		guard let controller = controller else { return }
 		let windowHeight = controller.view.window?.frame.height ?? 0
-		controller.tableNode.view.contentInset.bottom = windowHeight - frame.origin.y
+		controller.tableNode.view.contentInset.bottom = windowHeight - frame.origin.y + ALKeyboardHandler.bottomPadding
 	}
 	
 	func setOffsets(frame: CGRect) {
 		guard let controller = controller else { return }
 		let viewportHeight = frame.origin.y - CardPresentationManager.cardOffset
 		if controller.scrollController.latestContentSize > viewportHeight {
-			controller.tableNode.view.contentOffset = CGPoint(x: 0, y: controller.scrollController.latestContentSize - controller.textInputBar.frame.origin.y)
+			controller.tableNode.view.contentOffset = CGPoint(x: 0, y: controller.scrollController.latestContentSize - controller.textInputBar.frame.origin.y  + ALKeyboardHandler.bottomPadding)
 		}
 	}
 	

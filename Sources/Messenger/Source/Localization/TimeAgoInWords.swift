@@ -13,7 +13,7 @@ final public class TimeAgoInWords {
 
 private let table = "TimeAgoInWords"
 private let resourceBundle: Bundle = {
-    return KayakoResources.frameworkResourceBundle ?? Bundle.main
+    return KayakoResources.frameworkResourceBundle 
 }()
 
 public struct TimeAgoInWordsStrings {
@@ -85,7 +85,7 @@ public extension Date {
                 return "1" + TimeAgoInWordsStrings.Minute
             }
         case 2...44:
-            return "\(Int(round(distanceInMinutes)))" + TimeAgoInWordsStrings.Minutes
+            return "\(Int(round(distanceInMinutes))) " + TimeAgoInWordsStrings.Minutes
         case 45...90:
             return TimeAgoInWordsStrings.About + "1" + TimeAgoInWordsStrings.Hour
         // 90 mins up to 24 hours

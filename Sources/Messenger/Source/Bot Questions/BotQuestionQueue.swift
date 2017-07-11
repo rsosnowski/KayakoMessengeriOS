@@ -18,13 +18,13 @@ enum BotQuestions {
 		case .notAuth:
 			
 			let subjectQuestionModel: BotQuestionModel = {
-				let questionString = NSLocalizedString("askForSubject", tableName: "BotQuestions", bundle: KayakoResources.frameworkResourceBundle ?? Bundle.main, comment: "Asking user for a subject")
+				let questionString = NSLocalizedString("askForSubject", tableName: "BotQuestions", bundle: KayakoResources.frameworkResourceBundle , comment: "Asking user for a subject")
 				let question = BotReplyQuestion(questionString: questionString)
 				return BotQuestionModel(type: .replyBoxInput(question), state: .notAsked)
 			}()
 			
 			let emailQuestion: BotQuestionModel = {
-				let questionString = NSLocalizedString("askForEmail", tableName: "BotQuestions", bundle: KayakoResources.frameworkResourceBundle ?? Bundle.main, comment: "Asking user for email")
+				let questionString = NSLocalizedString("askForEmail", tableName: "BotQuestions", bundle: KayakoResources.frameworkResourceBundle, comment: "Asking user for email")
 				let question = BotTextQuestion(questionString: questionString ,heading: "Your email", placeholder: "email", value: "")
 				return BotQuestionModel(type: .text(question), state: .notAsked)
 			}()
@@ -32,7 +32,7 @@ enum BotQuestions {
 			return Queue<BotQuestionModel>.init(array: [subjectQuestionModel, emailQuestion])
 		case .auth:
 			let subjectQuestionModel: BotQuestionModel = {
-				let questionString = NSLocalizedString("askForSubject", tableName: "BotQuestions", bundle: KayakoResources.frameworkResourceBundle ?? Bundle.main, comment: "Asking user for a subject")
+				let questionString = NSLocalizedString("askForSubject", tableName: "BotQuestions", bundle: KayakoResources.frameworkResourceBundle, comment: "Asking user for a subject")
 				let question = BotReplyQuestion(questionString: questionString)
 				return BotQuestionModel(type: .replyBoxInput(question), state: .notAsked)
 			}()

@@ -15,7 +15,7 @@ public enum HeaderData {
 	case agent(agent: UserMinimal, isOnline: Bool)
 }
 
-class MessagesViewController: UIViewController, UIGestureRecognizerDelegate, ASTableDelegate, ALTextInputBarDelegate {
+class MessagesViewController: UIViewController, UIGestureRecognizerDelegate, ALTextInputBarDelegate {
 	
 	var dataSource: MessagesDataSource
 	let tableNode = ASTableNode()
@@ -90,11 +90,7 @@ class MessagesViewController: UIViewController, UIGestureRecognizerDelegate, AST
 		tableNode.view.separatorStyle = .none
 		self.dataSource.controller = self
 		self.tableNode.dataSource = dataSource
-		self.tableNode.delegate = self
-	}
-	
-	func scrollViewDidScroll(_ scrollView: UIScrollView) {
-	
+		self.tableNode.delegate = dataSource
 	}
 
 	func setHeaderAlphas(_ stickyHeaderHeight: CGFloat) {

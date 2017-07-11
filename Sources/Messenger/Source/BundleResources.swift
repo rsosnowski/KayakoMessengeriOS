@@ -111,6 +111,7 @@ public enum KayakoResources {
 	
 	func imageFromFramework(named name: String) -> UIImage? {
 		let bundle = Bundle(for: fakeResourceClass.self)
+		print(bundle.bundleURL)
 		if let kayakoMessengerBundlePath = bundle.path(forResource: "Kayako-Messenger", ofType: "bundle"),
 			let kayakoMessengerBundle = Bundle(path: kayakoMessengerBundlePath),
 			let image = UIImage(named: name, in: kayakoMessengerBundle, compatibleWith: nil) {
@@ -123,7 +124,14 @@ public enum KayakoResources {
 		return UIImage(named: name, in: bundle, compatibleWith: nil)
 	}
 	
-	static let frameworkResourceBundle = Bundle(identifier: "com.kayako.Messenger-iOS")
+	static var frameworkResourceBundle: Bundle = {
+		let bundle = Bundle(for: fakeResourceClass.self)
+		if let kayakoMessengerBundlePath = bundle.path(forResource: "Kayako-Messenger", ofType: "bundle"),
+			let kayakoMessengerBundle = Bundle(path: kayakoMessengerBundlePath) {
+			return kayakoMessengerBundle
+		}
+		return bundle
+	}()
 }
 
 class fakeResourceClass {

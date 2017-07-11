@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.documentation_url = 'https://developer.kayako.com/messenger/ios/installation/'
   s.frameworks  = "UIKit"
   s.module_name  = "KayakoMessenger"
-  s.ios.resource_bundle = { 'Kayako-Messenger' => 'Sources/**/*.xcassets' }
+  s.ios.resource_bundle = { 'Kayako-Messenger' => 'Resources/**' }
   s.dependency 'Texture'
   s.dependency 'Birdsong'
   s.dependency 'StatefulViewController'

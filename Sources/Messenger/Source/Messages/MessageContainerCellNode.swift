@@ -1,4 +1,4 @@
-	//
+//
 //  MessageContainerCellNode.swift
 //  kayako-messenger-SDK
 //
@@ -16,10 +16,9 @@ class MessageContainerCellNode: ASCellNode {
 	let isSender: Bool
 	let messageViewModel: MessageViewModel
 	
-	weak var resendTapDelegate: MessagesDataSource?
 	
 	//FIXME: Refactor this when PGDD ends
-	init(messageViewModel: MessageViewModel, shouldShowAvatar: Bool = true, delegate controller: AttachmentTapHandler?, client: Client? = nil, resendTapDelegate: MessagesDataSource? = nil) {
+	init(messageViewModel: MessageViewModel, shouldShowAvatar: Bool = true, delegate controller: AttachmentTapHandler?, client: Client? = nil) {
 		self.messageViewModel = messageViewModel
 		self.messageNode = MessageCellNode(messageViewModel: messageViewModel, shouldShowAvatar: shouldShowAvatar)
 		self.attachmentNodes = messageViewModel.attachments.map {
@@ -28,14 +27,8 @@ class MessageContainerCellNode: ASCellNode {
 		}
 		
 		self.isSender = messageViewModel.isSender
-		
-		self.resendTapDelegate = resendTapDelegate
 		super.init()
 		
-		let tapGR = UITapGestureRecognizer(target: self, action: #selector(initiateResend))
-		if case .failed = messageViewModel.replyState {
-			messageNode.view.addGestureRecognizer(tapGR)
-		}
 		
 		self.addSubnode(messageNode)
 		for node in attachmentNodes {
@@ -50,16 +43,9 @@ class MessageContainerCellNode: ASCellNode {
 			if case .yetToSend = messageViewModel.replyState {
 				node.alpha = 0.6
 			}
-			if case .failed = messageViewModel.replyState {
-				node.view.addGestureRecognizer(tapGR)
-			}
 			self.addSubnode(node)
 		}
 		
-	}
-	
-	func initiateResend() {
-		resendTapDelegate?.initiateResend()
 	}
 	
 	override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

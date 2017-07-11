@@ -19,7 +19,7 @@ enum ConversationState {
 	case loaded(Conversation, PendingMessagesOperations, FeedbackEventsHandler)
 }
 
-open class MessagesDataSource: NSObject, ASTableDataSource, InputSubmissionHandler, ReplyBoxDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+open class MessagesDataSource: NSObject, ASTableDataSource, ASTableDelegate, InputSubmissionHandler, ReplyBoxDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 	
 	let client: Client
 	
@@ -371,7 +371,7 @@ open class MessagesDataSource: NSObject, ASTableDataSource, InputSubmissionHandl
 						}()
 				}
 				
-				let node = MessageContainerCellNode(messageViewModel: pendingMessage, delegate: self, client: self.client, resendTapDelegate: self)
+				let node = MessageContainerCellNode(messageViewModel: pendingMessage, delegate: self, client: self.client)
 				node.messageNode.shouldShowAvatar = self.messagesDataContainer.shouldDisplayAvatar(at: rowSubscript, senderID: conversationCreator.id)
 				node.selectionStyle = .none
 				node.transform = tableNode.transform
@@ -400,7 +400,7 @@ open class MessagesDataSource: NSObject, ASTableDataSource, InputSubmissionHandl
 			}
 		case .messageStatus(let status, let isSender):
 			return {
-				let node = MessageStatusNode(status: status, isSender: isSender)
+				let node = MessageStatusNode(status: status, isSender: isSender, resendTapDelegate: self)
 				node.selectionStyle = .none 
 				return node
 			}
@@ -566,6 +566,24 @@ open class MessagesDataSource: NSObject, ASTableDataSource, InputSubmissionHandl
 			pendingMessageOperations.startSendingMessages()
 		}
 		self.controller?.tableNode.reloadRows(at: [IndexPath.init(row: messagesDataContainer.botMessages.count + messagesDataContainer.messages.count, section: 0)], with: .fade)
+	}
+	
+	public func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
+		switch messagesDataContainer[indexPath.row] {
+		case .pendingMessage(_):
+			if self.messagesDataContainer.pendingMessages.filter ({
+				message in
+				if case .failed = message.replyState {
+					return true
+				} else {
+					return false
+				}
+			}).count > 0 {
+				initiateResend()
+			}
+		default:
+			break
+		}
 	}
 	
 	public func sendButtonTapped(with text: String, textView: ALTextView) {
