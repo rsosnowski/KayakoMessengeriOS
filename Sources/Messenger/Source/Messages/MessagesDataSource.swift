@@ -24,7 +24,6 @@ open class MessagesDataSource: NSObject, ASTableDataSource, ASTableDelegate, Inp
 	let client: Client
 	
 	var conversationState: ConversationState
-	let kreClient: KREClient
 	var messagesDataContainer = MessagesDataContainer()
 	
 	//PGDD
@@ -40,10 +39,9 @@ open class MessagesDataSource: NSObject, ASTableDataSource, ASTableDelegate, Inp
 	var messagesUpdateTask: URLSessionDataTask?
 	var caseUpdateMessageTask: URLSessionDataTask?
 	
-	init(resource: Resource<Conversation>, client: Client = .shared, kreClient: KREClient = .shared, controller: MessagesViewController? = nil) {
+	init(resource: Resource<Conversation>, client: Client = .shared, controller: MessagesViewController? = nil) {
 		
 		self.client = client
-		self.kreClient = kreClient
 		switch resource {
 		case .notLoaded(let networkResource):
 			self.conversationState = .loading(resource: networkResource)
@@ -59,10 +57,9 @@ open class MessagesDataSource: NSObject, ASTableDataSource, ASTableDelegate, Inp
 		self.messagesDataContainer.dataSource = self
 	}
 	
-	init(conversationState: ConversationState, client: Client = .shared, KREClient: KREClient = .shared, controller: MessagesViewController? = nil) {
+	init(conversationState: ConversationState, client: Client = .shared, controller: MessagesViewController? = nil) {
 		self.conversationState = conversationState
 		self.client = client
-		self.kreClient = KREClient
 		super.init()
 		self.messagesDataContainer.dataSource = self
 	}
@@ -178,7 +175,7 @@ open class MessagesDataSource: NSObject, ASTableDataSource, ASTableDelegate, Inp
 	func setupTypingDelegate() {
 		if let controller = self.controller,
 			case .loaded(let conversation, _, _) = self.conversationState {
-			self.typingDelegate = TypingDelegate(textInputBar: controller.textInputBar, kreClient: self.kreClient, topic: conversation.realtimeChannel)
+			self.typingDelegate = TypingDelegate(textInputBar: controller.textInputBar, kreClient: ConversationsSource.shared.kreClient, topic: conversation.realtimeChannel)
 		}
 	}
 	

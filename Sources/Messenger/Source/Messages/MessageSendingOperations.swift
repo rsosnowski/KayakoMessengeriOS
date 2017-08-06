@@ -64,6 +64,8 @@ public class PendingMessagesOperations {
 					self.pendingMessages.dequeue()
 					self.sentClientIDs.insert(clientID)
 					self.startSendingMessages()
+				} else {
+					self.delegate?.addMessage(message: message, fromSelf: false)
 				}
 			}
 		}

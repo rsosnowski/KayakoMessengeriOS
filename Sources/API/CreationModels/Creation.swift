@@ -35,7 +35,7 @@ public enum Creation<T> {
 			
 			let newDict = [
 				"contents": messageCreation.contents,
-				"source_channel": messageCreation.sourceChannel.rawValue,
+				"source": messageCreation.sourceChannel.rawValue,
 				"clientID": messageCreation.clientID
 			]
 			

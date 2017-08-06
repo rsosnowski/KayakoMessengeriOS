@@ -105,23 +105,32 @@ class ConversationsSource {
 				
 				strongSelf.kreClient.addPresenceStateCallback(topic: conversation.realtimeChannel) {
 					state in
-					let typingAgents = state.flatMap({ (key, metas) -> AvatarViewModel? in
-						guard let firstMeta = metas.first else {
-							return nil
+					let typingAgents: [AvatarViewModel] = state
+						.flatMap {
+							meta in
+							return meta.value
 						}
-						let unboxer = Unboxer(dictionary: firstMeta)
-						guard let avatar: URL = try? unboxer.unbox(keyPath: "user.avatar"),
-						case .object(let creator) = conversation.creator,
-						let userID: Int = try? unboxer.unbox(keyPath: "user.id"),
-						creator.id != userID,
-						let isTyping = firstMeta["is_typing"] as? Bool,
-						isTyping == true else {
-							print(firstMeta)
-							return nil
+						.filter {
+							meta in
+							return meta["is_typing"] as? Bool == true
 						}
-						print("istyping is true for \(avatar)")
-						return .url(avatar)
-					})
+						.flatMap {
+							typingMeta in
+							let unboxer = Unboxer(dictionary: typingMeta)
+							guard let avatar: URL = try? unboxer.unbox(keyPath: "user.avatar"),
+								case .object(let creator) = conversation.creator,
+								let userID: Int = try? unboxer.unbox(keyPath: "user.id"),
+								creator.id != userID,
+								let isTyping = typingMeta["is_typing"] as? Bool,
+								isTyping == true else {
+									return nil
+							}
+							return .url(avatar)
+						}
+					
+					if typingAgents.count > 0 {
+						print("asdfsadf")
+					}
 					self?.typingIndicators[conversation.id] = typingAgents
 					NotificationCenter.default.post(name: KayakoNotifications.conversationTypingIndicator, object: self, userInfo: ["conversationID": conversation.id])
 				}
