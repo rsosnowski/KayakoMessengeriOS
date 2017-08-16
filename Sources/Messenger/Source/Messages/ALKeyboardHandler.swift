@@ -34,7 +34,7 @@ class ALKeyboardHandler: NSObject {
 		guard let controller = controller else { return }
 		let viewportHeight = frame.origin.y - CardPresentationManager.cardOffset
 		if controller.scrollController.latestContentSize > viewportHeight {
-			controller.tableNode.view.contentOffset = CGPoint(x: 0, y: controller.scrollController.latestContentSize - controller.textInputBar.frame.origin.y  + ALKeyboardHandler.bottomPadding)
+			controller.tableNode.contentOffset = CGPoint(x: 0, y: controller.scrollController.latestContentSize - controller.textInputBar.frame.origin.y  + ALKeyboardHandler.bottomPadding)
 		}
 	}
 	
@@ -105,7 +105,7 @@ extension MessagesViewController {
 	
 	func scrollToOffset(offset: CGFloat) {
 		UIView.animate(withDuration: 0.25, delay: 0.0, options: .curveEaseOut, animations: {
-			self.tableNode.view.contentOffset = CGPoint(x: 0, y: offset - self.viewportHeight)
+			self.tableNode.contentOffset = CGPoint(x: 0, y: offset - self.viewportHeight)
 		}, completion: nil)
 
 	}

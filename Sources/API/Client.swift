@@ -58,7 +58,7 @@ public class Client {
 		return task
 	}
 	
-	public func loadIfNecessary<T: Unboxable>(resources: [Resource<T>], resourceLoaded: @escaping ((Result<T>) -> Void), onAllResources: @escaping (([Result<T>]) -> Void) ) {
+	public func loadIfNecessary<T>(resources: [Resource<T>], resourceLoaded: @escaping ((Result<T>) -> Void), onAllResources: @escaping (([Result<T>]) -> Void) ) {
 		let serviceGroup = DispatchGroup()
 		
 		var results: [Result<T>?] = resources.map{ _ in nil }
