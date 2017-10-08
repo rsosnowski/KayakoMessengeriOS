@@ -47,7 +47,7 @@ public class KREClient {
 		socket.enableLogging = false
 	}
 	
-	func connect(onConnect: (@escaping (Void) -> Void)) {
+	func connect(onConnect: (@escaping () -> Void)) {
 		socket.onConnect = onConnect
 		socket.connect()
 		socket.onDisconnect = {

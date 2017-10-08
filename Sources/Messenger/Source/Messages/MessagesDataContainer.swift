@@ -128,9 +128,10 @@ class MessagesDataContainer {
 			
 			return {
 				let lastAnswer = botMessages.enumerated().filter {
-					if case .answer = $1 {
+					switch $1 {
+					case .answer(_):
 						return true
-					} else {
+					case .question(_):
 						return false
 					}
 				}.last?.offset
@@ -140,7 +141,9 @@ class MessagesDataContainer {
 		}()
 		
 		let oldMessagesData = self.messagesData
-		let count = botMessages.count + messageItemIDs.count + pendingMessages.count + (statusIndex == nil ? 0 : 1) + typingIndicators.count + (botFeedback == nil ? 0 : 1)
+		let botFeedbackCount = (botFeedback == nil ? 0 : 1)
+		let statusIndexCount = (statusIndex == nil ? 0 : 1)
+		let count = botMessages.count + messageItemIDs.count + pendingMessages.count + typingIndicators.count + botFeedbackCount + statusIndexCount
 		self.messagesData = (0..<count).map({ (index) -> MessageData in
 			let position: Int = {
 				if let statusIndex = statusIndex,

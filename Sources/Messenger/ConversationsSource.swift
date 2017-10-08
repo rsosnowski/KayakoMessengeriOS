@@ -7,8 +7,6 @@
 //
 
 import Foundation
-
-import Birdsong
 import Unbox
 
 class ConversationsSource {

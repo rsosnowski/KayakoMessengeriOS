@@ -7,7 +7,6 @@
 //
 import Foundation
 
-import Birdsong
 import UIKit
 
 protocol MessageSentDelegate: class {
