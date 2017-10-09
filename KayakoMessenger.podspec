@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KayakoMessenger"
-  s.version      = "0.2.1"
+  s.version      = "0.2.3"
   s.summary      = "The Kayako iOS SDK for integrating Kayako Messenger live chat into your iOS application"
   s.description  = "The Kayako iOS SDK for integrating Kayako Messenger live chat into your iOS application. Supports iOS 9 and above"
   s.homepage     = "https://github.com/kayako/KayakoMessengeriOS"
