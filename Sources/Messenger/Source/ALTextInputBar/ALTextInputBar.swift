@@ -200,14 +200,8 @@ public class ALTextInputBar: UIView, ALTextViewDelegate {
 		
 		marketingButton.setAttributedTitle(attributedMarketingString, for: .normal)
 		addSubnode(marketingButton)
-		marketingButton.layoutSpecBlock = {
-			[weak self] size in
-			guard let `self` = self else {
-				return ASStackLayoutSpec()
-			}
-			return ASStackLayoutSpec(direction: .horizontal, spacing: 0, justifyContent: .end, alignItems: .center, children: [self.marketingButton.titleNode])
-		}
-		marketingButton.addTarget(self, action: #selector(marketingButtonTapped), forControlEvents: .touchUpInside)
+		marketingButton.addTarget(self, action: #selector(marketingButtonTapped), forControlEvents: ASControlNodeEvent.touchUpInside)
+		marketingButton.hitTestSlop = UIEdgeInsets.init(top: -9, left: -9, bottom: -9, right: -9)
 		self.backgroundColor = textViewBackgroundColor
     }
 	
