@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		423314D11F94C5EB0049D5B5 /* PINCacheTexture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423314D01F94C5EB0049D5B5 /* PINCacheTexture.framework */; };
 		423881BB1F0EA39D002B2B0D /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238818A1F0EA39D002B2B0D /* Authorization.swift */; };
 		423881BC1F0EA39D002B2B0D /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238818B1F0EA39D002B2B0D /* Client.swift */; };
 		423881BD1F0EA39D002B2B0D /* AttachmentCreationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238818D1F0EA39D002B2B0D /* AttachmentCreationModel.swift */; };
@@ -85,7 +86,6 @@
 		4238825C1F0EA81A002B2B0D /* AgentsOnline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423882181F0EA81A002B2B0D /* AgentsOnline.swift */; };
 		4238825D1F0EA81A002B2B0D /* HomeScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423882191F0EA81A002B2B0D /* HomeScreenDataSource.swift */; };
 		4238825E1F0EA81A002B2B0D /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238821A1F0EA81A002B2B0D /* HomeScreenViewController.swift */; };
-		4238825F1F0EA81A002B2B0D /* ImageCacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238821B1F0EA81A002B2B0D /* ImageCacheHandler.swift */; };
 		423882601F0EA81A002B2B0D /* RecentConversationsNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238821C1F0EA81A002B2B0D /* RecentConversationsNode.swift */; };
 		423882611F0EA81A002B2B0D /* WelcomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238821D1F0EA81A002B2B0D /* WelcomeHeader.swift */; };
 		423882621F0EA81A002B2B0D /* KayakoStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238821E1F0EA81A002B2B0D /* KayakoStyle.swift */; };
@@ -188,6 +188,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		423314CF1F94C5CE0049D5B5 /* PINCacheTexture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINCacheTexture.framework; path = "../../PINCache-Texture/Carthage/Build/iOS/PINCacheTexture.framework"; sourceTree = "<group>"; };
+		423314D01F94C5EB0049D5B5 /* PINCacheTexture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINCacheTexture.framework; path = Carthage/Build/iOS/PINCacheTexture.framework; sourceTree = "<group>"; };
 		4238818A1F0EA39D002B2B0D /* Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		4238818B1F0EA39D002B2B0D /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		4238818D1F0EA39D002B2B0D /* AttachmentCreationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentCreationModel.swift; sourceTree = "<group>"; };
@@ -269,7 +271,6 @@
 		423882181F0EA81A002B2B0D /* AgentsOnline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentsOnline.swift; sourceTree = "<group>"; };
 		423882191F0EA81A002B2B0D /* HomeScreenDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenDataSource.swift; sourceTree = "<group>"; };
 		4238821A1F0EA81A002B2B0D /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
-		4238821B1F0EA81A002B2B0D /* ImageCacheHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheHandler.swift; sourceTree = "<group>"; };
 		4238821C1F0EA81A002B2B0D /* RecentConversationsNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentConversationsNode.swift; sourceTree = "<group>"; };
 		4238821D1F0EA81A002B2B0D /* WelcomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeHeader.swift; sourceTree = "<group>"; };
 		4238821E1F0EA81A002B2B0D /* KayakoStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KayakoStyle.swift; sourceTree = "<group>"; };
@@ -331,6 +332,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423314D11F94C5EB0049D5B5 /* PINCacheTexture.framework in Frameworks */,
 				423882BB1F0EAEB3002B2B0D /* Wrap.framework in Frameworks */,
 				423882BC1F0EAEB3002B2B0D /* Unbox.framework in Frameworks */,
 				423882BD1F0EAEB3002B2B0D /* AsyncDisplayKit.framework in Frameworks */,
@@ -474,6 +476,7 @@
 		423881EC1F0EA7FC002B2B0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				423314D01F94C5EB0049D5B5 /* PINCacheTexture.framework */,
 				423881ED1F0EA7FC002B2B0D /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -587,7 +590,6 @@
 				423882181F0EA81A002B2B0D /* AgentsOnline.swift */,
 				423882191F0EA81A002B2B0D /* HomeScreenDataSource.swift */,
 				4238821A1F0EA81A002B2B0D /* HomeScreenViewController.swift */,
-				4238821B1F0EA81A002B2B0D /* ImageCacheHandler.swift */,
 				4238821C1F0EA81A002B2B0D /* RecentConversationsNode.swift */,
 				4238821D1F0EA81A002B2B0D /* WelcomeHeader.swift */,
 			);
@@ -671,6 +673,7 @@
 		52D6D9721BEFF229002C0205 = {
 			isa = PBXGroup;
 			children = (
+				423314CF1F94C5CE0049D5B5 /* PINCacheTexture.framework */,
 				4238827D1F0EAAE5002B2B0D /* AsyncDisplayKit.framework */,
 				4238827E1F0EAAE5002B2B0D /* Birdsong.framework */,
 				4238827F1F0EAAE5002B2B0D /* NVActivityIndicatorView.framework */,
@@ -940,6 +943,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/PINRemoteImage.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Starscream.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/StatefulViewController.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PINCacheTexture.framework",
 			);
 			outputPaths = (
 			);
@@ -1013,7 +1017,6 @@
 				423881C81F0EA39D002B2B0D /* String+EmailValidation.swift in Sources */,
 				423881E41F0EA39D002B2B0D /* Resource.swift in Sources */,
 				4238823E1F0EA81A002B2B0D /* FoundationExtensions.swift in Sources */,
-				4238825F1F0EA81A002B2B0D /* ImageCacheHandler.swift in Sources */,
 				423881D81F0EA39D002B2B0D /* StarterData.swift in Sources */,
 				423881CE1F0EA39D002B2B0D /* KayakoAPI.swift in Sources */,
 				4238824C1F0EA81A002B2B0D /* BotQuestionQueue.swift in Sources */,

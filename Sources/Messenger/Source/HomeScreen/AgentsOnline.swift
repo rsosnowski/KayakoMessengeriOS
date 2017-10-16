@@ -7,8 +7,7 @@
 //
 
 import AsyncDisplayKit
-import PINCache
-import PINRemoteImage
+import PINCacheTexture
 
 class AgentsOnlineNode: ASCellNode {
 

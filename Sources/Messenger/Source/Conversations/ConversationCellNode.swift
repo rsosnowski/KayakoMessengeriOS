@@ -7,6 +7,7 @@
 //
 
 import AsyncDisplayKit
+import PINCacheTexture
 
 class ConversationCellNode: ASCellNode {
 
