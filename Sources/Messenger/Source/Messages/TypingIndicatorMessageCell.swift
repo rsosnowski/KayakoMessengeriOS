@@ -8,6 +8,7 @@
 
 import AsyncDisplayKit
 import NVActivityIndicatorView
+import PINCacheTexture
 //67x52 27x24
 class TypingIndicatorMessageCell: ASCellNode {
 	

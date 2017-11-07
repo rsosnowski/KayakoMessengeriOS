@@ -308,7 +308,7 @@ open class MessagesDataSource: NSObject, ASTableDataSource, ASTableDelegate, Inp
 		return messagesDataContainer.count
 	}
 	
-	public func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
+	public func tableNode(_ tableNode: ASTableNode, nodeForRowAt indexPath: IndexPath) -> ASCellNode {
 		let (_, row) = (indexPath.section, indexPath.row)
 		
 		let rowSubscript = row
@@ -318,88 +318,69 @@ open class MessagesDataSource: NSObject, ASTableDataSource, ASTableDelegate, Inp
 			switch botMessage {
 			case .answer(let answer):
 				let answerViewModel = MessageViewModel(avatar: .url(Production.shared.placeholderAvatarURL), contentText: answer, isSender: true, replyState: .sent)
-				return {
-					let node = MessageCellNode(messageViewModel: answerViewModel)
-					node.transform = tableNode.transform
-					node.selectionStyle = .none
-					return node
-					}
+				let node = MessageCellNode(messageViewModel: answerViewModel)
+				node.transform = tableNode.transform
+				node.selectionStyle = .none
+				return node
 			case .question(let question):
 				switch question.type {
 				case .replyBoxInput(_):
-					return {
-						return ASCellNode()
-					}
+					return ASCellNode()
 				case .text(let textQuestion):
-					return {
-						let node = BotTextQuestionNode(question: textQuestion, state: question.state)
-						node.submitDelegate = self
-						node.transform = tableNode.transform
-						node.selectionStyle = .none
-						return node
-					}
+					let node = BotTextQuestionNode(question: textQuestion, state: question.state)
+					node.submitDelegate = self
+					node.transform = tableNode.transform
+					node.selectionStyle = .none
+					return node
 				}
 			}
 		case .message(let message):
 			guard case .object(let creator) = message.creator,
 				case .loaded(let conversation, _, _) = self.conversationState,
-				case .object(let conversationCreator) = conversation.creator else { return { return ASCellNode() }  }
+				case .object(let conversationCreator) = conversation.creator else { return ASCellNode() }
 			
 			let messageVM = MessageViewModel(avatar: .url(creator.avatar) , attachments: message.attachments.map(Attachment.toViewModel), contentText: message.contentText, isSender: message.creator == conversation.creator, replyState: message.status ?? .sent)
 			
-			return {
-				//TODODSkjfnaskdfjnasdf
-				let node = MessageContainerCellNode(messageViewModel: messageVM, delegate: self, client: self.client)
-				node.messageNode.shouldShowAvatar = self.messagesDataContainer.shouldDisplayAvatar(at: rowSubscript, senderID: conversationCreator.id)
-				if node.messageNode.shouldShowAvatar {
-					node.messageNode.customInsets = UIEdgeInsets.init(top: 9, left: 18, bottom: 0, right: 18)
-				}
-				node.selectionStyle = .none
-				node.transform = tableNode.transform
-				return node
+			let node = MessageContainerCellNode(messageViewModel: messageVM, delegate: self, client: self.client)
+			node.messageNode.shouldShowAvatar = self.messagesDataContainer.shouldDisplayAvatar(at: rowSubscript, senderID: conversationCreator.id)
+			if node.messageNode.shouldShowAvatar {
+				node.messageNode.customInsets = UIEdgeInsets.init(top: 9, left: 18, bottom: 0, right: 18)
 			}
+			node.selectionStyle = .none
+			node.transform = tableNode.transform
+			return node
 		case .pendingMessage(let pendingMessage):
-			return {
-				guard case .loaded(let conversation, _, _) = self.conversationState,
-					case .object(let conversationCreator) = conversation.creator else {
-						return {
-							return MessageContainerCellNode(messageViewModel: pendingMessage, delegate: nil)
-						}()
-				}
-				
-				let node = MessageContainerCellNode(messageViewModel: pendingMessage, delegate: self, client: self.client)
-				node.messageNode.shouldShowAvatar = self.messagesDataContainer.shouldDisplayAvatar(at: rowSubscript, senderID: conversationCreator.id)
-				node.selectionStyle = .none
-				node.transform = tableNode.transform
-				return node
+			guard case .loaded(let conversation, _, _) = self.conversationState,
+				case .object(let conversationCreator) = conversation.creator else {
+					return {
+						return MessageContainerCellNode(messageViewModel: pendingMessage, delegate: nil)
+					}()
 			}
+			
+			let node = MessageContainerCellNode(messageViewModel: pendingMessage, delegate: self, client: self.client)
+			node.messageNode.shouldShowAvatar = self.messagesDataContainer.shouldDisplayAvatar(at: rowSubscript, senderID: conversationCreator.id)
+			node.selectionStyle = .none
+			node.transform = tableNode.transform
+			return node
 		case .feedback(let botFeedback):
-			return {
-				let node = BotFeedbackQuestionNode(feedback: botFeedback)
-				node.selectionStyle = .none
-				if case .loaded(_, _, let feedbackHandler) = self.conversationState {
-					node.eventHandler = feedbackHandler
-				}
-				return node
+			let node = BotFeedbackQuestionNode(feedback: botFeedback)
+			node.selectionStyle = .none
+			if case .loaded(_, _, let feedbackHandler) = self.conversationState {
+				node.eventHandler = feedbackHandler
 			}
+			return node
 		case .dateSeparator(let date):
-			return {
-				let node = DateSeparatorNode(date: date)
-				node.selectionStyle = .none
-				return node
-			}
+			let node = DateSeparatorNode(date: date)
+			node.selectionStyle = .none
+			return node
 		case .typingIndicator(let avatarViewModel):
-			return {
-				let node = TypingIndicatorMessageCell()
-				node.load(avatar: avatarViewModel)
-				return node
-			}
+			let node = TypingIndicatorMessageCell()
+			node.load(avatar: avatarViewModel)
+			return node
 		case .messageStatus(let status, let isSender):
-			return {
-				let node = MessageStatusNode(status: status, isSender: isSender, resendTapDelegate: self)
-				node.selectionStyle = .none 
-				return node
-			}
+			let node = MessageStatusNode(status: status, isSender: isSender, resendTapDelegate: self)
+			node.selectionStyle = .none
+			return node
 		}
 	}
 	

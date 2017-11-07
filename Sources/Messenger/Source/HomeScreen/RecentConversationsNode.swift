@@ -7,6 +7,7 @@
 //
 
 import AsyncDisplayKit
+import PINCacheTexture
 
 public struct ConversationViewModel {
 	let id: Int

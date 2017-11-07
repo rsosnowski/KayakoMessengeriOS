@@ -6,6 +6,7 @@
 //  Copyright © 2017 Robin Malhotra. All rights reserved.
 //
 import AsyncDisplayKit
+import PINCacheTexture
 
 public struct AgentsHeaderModel {
 	var avatars: [AvatarViewModel]

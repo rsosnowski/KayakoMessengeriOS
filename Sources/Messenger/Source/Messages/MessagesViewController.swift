@@ -194,7 +194,7 @@ class MessagesViewController: UIViewController, UIGestureRecognizerDelegate, ALT
 		
 		tableNode.view.showsVerticalScrollIndicator = false
 		tableNode.view.keyboardDismissMode = .interactive
-		tableNode.view.contentInset = MessagesViewController.stickyContentInsets
+		tableNode.contentInset = MessagesViewController.stickyContentInsets
 		
 		configureInputBar()
 		makeNavBarTransparent()

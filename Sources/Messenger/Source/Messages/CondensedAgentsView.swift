@@ -7,7 +7,7 @@
 //
 
 import AsyncDisplayKit
-
+import PINCacheTexture
 
 struct CondensedAgentViewModel {
 	let agentAvatars: [(avatar: AvatarViewModel, isOnline: Bool)]
