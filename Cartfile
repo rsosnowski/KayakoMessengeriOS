@@ -3,4 +3,4 @@ github "johnsundell/wrap"
 github "codeOfRobin/Birdsong" "v0.5"
 github "aschuch/StatefulViewController" ~> 3.0
 github "codeOfRobin/NVActivityIndicatorView" "master"
-github "codeOfRobin/PINCache-Texture" ~> 0.0.3
+github "codeOfRobin/PINCache-Texture" "master"
