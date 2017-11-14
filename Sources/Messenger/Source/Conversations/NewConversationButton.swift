@@ -35,17 +35,17 @@ class NewConversationButton: ASButtonNode {
 	}
 	
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-		UIView.animate(withDuration: animationDuration, delay: 0.0, usingSpringWithDamping: animationDamping, initialSpringVelocity: animationSpringVelocity, options: [], animations: {
-			self.view.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
-			self.backgroundColor = UIColor(red:0.83, green:0.38, blue:0.22, alpha:1.00)
-		}, completion: nil)
+//		UIView.animate(withDuration: animationDuration, delay: 0.0, usingSpringWithDamping: animationDamping, initialSpringVelocity: animationSpringVelocity, options: [], animations: {
+//			self.view.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+//			self.backgroundColor = UIColor(red:0.83, green:0.38, blue:0.22, alpha:1.00)
+//		}, completion: nil)
 	}
 	
 	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-		UIView.animate(withDuration: animationDuration, delay: 0.0, usingSpringWithDamping: animationDamping, initialSpringVelocity: animationSpringVelocity, options: [], animations: {
-			self.view.transform = .identity
-			self.backgroundColor = ColorPallete.primaryBrandingColor
-		}, completion: nil)
+//		UIView.animate(withDuration: animationDuration, delay: 0.0, usingSpringWithDamping: animationDamping, initialSpringVelocity: animationSpringVelocity, options: [], animations: {
+//			self.view.transform = .identity
+//			self.backgroundColor = ColorPallete.primaryBrandingColor
+//		}, completion: nil)
 		sendActions(forControlEvents: .touchUpInside, with: nil)
 	}
 	
