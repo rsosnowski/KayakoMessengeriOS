@@ -80,8 +80,6 @@ class HomeScreenViewController: UIViewController, ASTableDelegate {
 		let barButtonItem = UIBarButtonItem(image: KayakoResources.closeButton.image, style: .plain, target: self, action: #selector(dismissVC))
 		barButtonItem.tintColor = .white
 		barButtonItem.width = 32.0
-		barButtonItem.imageInsets.top = 9.0
-		barButtonItem.imageInsets.bottom = -9.0
 		self.navigationItem.rightBarButtonItems = [barButtonItem]
 
 		self.node.view.setBackground(background: configuration.background)
