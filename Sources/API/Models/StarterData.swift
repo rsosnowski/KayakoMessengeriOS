@@ -10,7 +10,7 @@ import Unbox
 
 public struct StarterData: Unboxable {
 	public let lastActiveAgents: [Resource<UserMinimal>]
-	public let averageReplyTime: Float?
+	public let averageReplyTime: Float
 	
 	public init(unboxer: Unboxer) throws {
 		self.lastActiveAgents = try unboxer.unbox(key: "last_active_agents")

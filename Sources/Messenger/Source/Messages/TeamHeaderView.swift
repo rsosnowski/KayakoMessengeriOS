@@ -20,7 +20,7 @@ struct TeamHeaderModel {
 	
 	init(_ starterData: StarterData, _ configuration: Configuration) {
 		self.brandName = configuration.brandName
-		self.activity = "We typically reply in \(replyTimeString(for: starterData.averageReplyTime ?? 0))"
+		self.activity = "We typically reply in \(replyTimeString(for: starterData.averageReplyTime))"
 	}
 }
 
