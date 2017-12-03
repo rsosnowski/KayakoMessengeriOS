@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420B19CB1FC41E8F00BCD10A /* BotQuestions.strings in Resources */ = {isa = PBXBuildFile; fileRef = 420B19C91FC41E8F00BCD10A /* BotQuestions.strings */; };
 		423314D11F94C5EB0049D5B5 /* PINCacheTexture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423314D01F94C5EB0049D5B5 /* PINCacheTexture.framework */; };
 		423881BB1F0EA39D002B2B0D /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238818A1F0EA39D002B2B0D /* Authorization.swift */; };
 		423881BC1F0EA39D002B2B0D /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238818B1F0EA39D002B2B0D /* Client.swift */; };
@@ -69,7 +70,6 @@
 		4238824B1F0EA81A002B2B0D /* BotQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423882031F0EA81A002B2B0D /* BotQuestionModel.swift */; };
 		4238824C1F0EA81A002B2B0D /* BotQuestionQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423882041F0EA81A002B2B0D /* BotQuestionQueue.swift */; };
 		4238824D1F0EA81A002B2B0D /* BotTextQuestionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423882051F0EA81A002B2B0D /* BotTextQuestionNode.swift */; };
-		4238824E1F0EA81A002B2B0D /* BotQuestions.strings in Resources */ = {isa = PBXBuildFile; fileRef = 423882061F0EA81A002B2B0D /* BotQuestions.strings */; };
 		4238824F1F0EA81A002B2B0D /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423882081F0EA81A002B2B0D /* Queue.swift */; };
 		423882501F0EA81A002B2B0D /* BundleResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423882091F0EA81A002B2B0D /* BundleResources.swift */; };
 		423882511F0EA81A002B2B0D /* CardPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238820A1F0EA81A002B2B0D /* CardPresentationManager.swift */; };
@@ -188,6 +188,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		420B19CA1FC41E8F00BCD10A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BotQuestions.strings; sourceTree = "<group>"; };
 		423314CF1F94C5CE0049D5B5 /* PINCacheTexture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINCacheTexture.framework; path = "../../PINCache-Texture/Carthage/Build/iOS/PINCacheTexture.framework"; sourceTree = "<group>"; };
 		423314D01F94C5EB0049D5B5 /* PINCacheTexture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINCacheTexture.framework; path = Carthage/Build/iOS/PINCacheTexture.framework; sourceTree = "<group>"; };
 		4238818A1F0EA39D002B2B0D /* Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
@@ -254,7 +255,6 @@
 		423882031F0EA81A002B2B0D /* BotQuestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotQuestionModel.swift; sourceTree = "<group>"; };
 		423882041F0EA81A002B2B0D /* BotQuestionQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotQuestionQueue.swift; sourceTree = "<group>"; };
 		423882051F0EA81A002B2B0D /* BotTextQuestionNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotTextQuestionNode.swift; sourceTree = "<group>"; };
-		423882071F0EA81A002B2B0D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BotQuestions.strings; sourceTree = "<group>"; };
 		423882081F0EA81A002B2B0D /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		423882091F0EA81A002B2B0D /* BundleResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleResources.swift; sourceTree = "<group>"; };
 		4238820A1F0EA81A002B2B0D /* CardPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPresentationManager.swift; sourceTree = "<group>"; };
@@ -556,7 +556,6 @@
 				423882031F0EA81A002B2B0D /* BotQuestionModel.swift */,
 				423882041F0EA81A002B2B0D /* BotQuestionQueue.swift */,
 				423882051F0EA81A002B2B0D /* BotTextQuestionNode.swift */,
-				423882061F0EA81A002B2B0D /* BotQuestions.strings */,
 				423882081F0EA81A002B2B0D /* Queue.swift */,
 			);
 			path = "Bot Questions";
@@ -664,6 +663,7 @@
 		424153191F14E99A0005FF2A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				420B19C91FC41E8F00BCD10A /* BotQuestions.strings */,
 				4241531A1F14E99A0005FF2A /* Assets.xcassets */,
 				4241531B1F14E99A0005FF2A /* TimeAgoInWords.strings */,
 			);
@@ -912,7 +912,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4241531D1F14E99A0005FF2A /* Assets.xcassets in Resources */,
-				4238824E1F0EA81A002B2B0D /* BotQuestions.strings in Resources */,
+				420B19CB1FC41E8F00BCD10A /* BotQuestions.strings in Resources */,
 				4241531E1F14E99A0005FF2A /* TimeAgoInWords.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1113,10 +1113,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		423882061F0EA81A002B2B0D /* BotQuestions.strings */ = {
+		420B19C91FC41E8F00BCD10A /* BotQuestions.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				423882071F0EA81A002B2B0D /* en */,
+				420B19CA1FC41E8F00BCD10A /* en */,
 			);
 			name = BotQuestions.strings;
 			sourceTree = "<group>";

@@ -14,7 +14,8 @@ public struct StarterData: Unboxable {
 	
 	public init(unboxer: Unboxer) throws {
 		self.lastActiveAgents = try unboxer.unbox(key: "last_active_agents")
-		self.averageReplyTime = try unboxer.unbox(key: "average_reply_time")
+		let optionalAverageReplyTime: Float? = try? unboxer.unbox(key: "average_reply_time")
+		self.averageReplyTime = optionalAverageReplyTime ?? 0
 	}
 	
 	public init(lastActiveAgents: [Resource<UserMinimal>], averageReplyTime: Float, activeConversations: [Resource<Conversation>]) {
